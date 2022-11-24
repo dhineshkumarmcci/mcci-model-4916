@@ -12,7 +12,6 @@ This library provides Arduino support for the MCCI Catena&reg; Model 4916 Multi 
 	- [`cPCA9574` I2C GPIO controller](#cPCA9574-i2c-gpio-controller)
 	- [`c4916Gpios` Catena 4916 GPIO Control](#c4916gpios-catena-4916-gpio-control)
 - [Example Sketches](#example-sketches)
-- [Additional material](#additional-material)
 - [Meta](#meta)
 	- [License](#license)
 	- [Support Open Source Hardware and Software](#support-open-source-hardware-and-software)
