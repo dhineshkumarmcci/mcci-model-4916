@@ -75,6 +75,8 @@ public:
     bool begin();
     void end();
 
+    /*functions to provide power to modules*/
+    
     bool setVdd1(bool fOn)  {
         return this->m_gpio->modify((uint8_t)Power_t::kVdd_1, fOn ? 0xFF : 0);
         }
@@ -115,6 +117,28 @@ public:
         }
     bool getVPiera() const {
         return this->m_gpio->get() & (uint8_t)Power_t::kVdd_Piera;
+        }
+
+    /*functions to enable I2C communication*/
+
+    bool enableVdd1(bool fOn)  {
+        return this->m_gpio->modify((uint8_t)Enable_t::kEnable_Vdd1, fOn ? 0xFF : 0);
+        }
+
+    bool enableGps(bool fOn) {
+        return this->m_gpio->modify((uint8_t)Enable_t::kEnable_Gps, fOn ? 0xFF : 0);
+        }
+
+    bool enableTvoc(bool fOn) {
+        return this->m_gpio->modify((uint8_t)Enable_t::kEnable_Tvoc, fOn ? 0xFF : 0);
+        }
+
+    bool enableQwiic(bool fOn) {
+        return this->m_gpio->modify((uint8_t)Enable_t::kEnable_Qwiic, fOn ? 0xFF : 0);
+        }
+
+    bool enablePiera(bool fOn) {
+        return this->m_gpio->modify((uint8_t)Enable_t::kEnable_Piera, fOn ? 0xFF : 0);
         }
 
 private:
