@@ -76,7 +76,7 @@ public:
     void end();
 
     /*functions to provide power to modules*/
-    
+
     bool setVdd1(bool fOn)  {
         return this->m_gpio->modify((uint8_t)Power_t::kVdd_1, fOn ? 0xFF : 0);
         }
